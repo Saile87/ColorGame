@@ -10,8 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     let colors: [Color] = [.red, .blue, .yellow, .green, .black, .gray]
-    @State private var farben = ["Red", "Blue", "Yello", "Green", "Black", "Gray"].shuffled()
+    @State private var farben = ["Rot", "Blau", "Gelb", "Grün", "Schwarz", "Grau"].shuffled()
     @State private var correctAnswer = Int.random(in: 0..<5)
+    @State private var scoreTitle = ""
     
     var body: some View {
         VStack {
@@ -29,7 +30,7 @@ struct ContentView: View {
         
     func ColorTapped(_ number: Int) {
         if number == correctAnswer {
-            
+            scoreTitle = "Correct"
         }
     }
 }
