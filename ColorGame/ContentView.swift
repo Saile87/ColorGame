@@ -11,7 +11,7 @@ struct ContentView: View {
     
     let colors: [Color] = [.red, .blue, .yellow, .green, .black, .gray]
     @State private var farben = ["Rot", "Blau", "Gelb", "Grün", "Schwarz", "Grau"].shuffled()
-    @State private var correctAnswer = Int.random(in: 0..<5)
+    @State private var correctAnswer = Int.random(in: 0..<6)
     @State private var scoreTitle = ""
     
     var body: some View {
